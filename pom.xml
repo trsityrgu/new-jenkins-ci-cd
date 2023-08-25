@@ -21,15 +21,15 @@
 
 	<build>
 		<plugins>
-			<plugin>
+<!-- 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.2.0</version>
-			</plugin>
+				<version>3.8.2</version>
+			</plugin> -->
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.8.2</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
@@ -47,9 +47,9 @@
 						<properties>
 							<http.port>8081</http.port>
 						</properties>
-						<properties>
+<!-- 						<properties>
 							<api.id>18824958</api.id>
-						</properties>
+						</properties> -->
 
 					</cloudHubDeployment>
 				</configuration>
