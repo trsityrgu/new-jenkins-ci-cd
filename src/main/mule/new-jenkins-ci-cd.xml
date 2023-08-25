@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="366f497c-f71b-4ed2-886d-936d887cfcf9" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="new-jenkins-ci-cdFlow" doc:id="11af9269-eb9f-4b57-8ac2-35299eb64874" >
+		<http:listener doc:name="Listener" doc:id="96b1ad1c-0837-49a7-ad38-187de2faa2c0" config-ref="HTTP_Listener_config" path="/test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="9e41f3ef-4b8e-4120-8977-2ad69f07628a" message="#[payload]"/>
+		<set-payload value="helloworld!!!" doc:name="Set Payload" doc:id="d1ef7d69-e469-4e00-bcab-02d812406711" />
+	</flow>
+</mule>
