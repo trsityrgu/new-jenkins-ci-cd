@@ -47,9 +47,9 @@
 						<properties>
 							<http.port>8081</http.port>
 						</properties>
-<!-- 						<properties>
-							<api.id>18824958</api.id>
-						</properties> -->
+						<properties>
+							<api.id>18924480</api.id>
+						</properties> 
 
 					</cloudHubDeployment>
 				</configuration>
